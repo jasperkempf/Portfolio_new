@@ -24,8 +24,8 @@ a:hover {
 /* Logo */
 #navbar .logo {
   font-weight: bold;
-  font-size: 0.8rem;
-  color: #8FEAC7;
+  font-size: 1.2rem;
+  color: #f0f0f0;
   white-space: nowrap; /* keep logo on one line */
 }
 
@@ -50,7 +50,7 @@ a:hover {
   align-items: center;
   transition: background 0.3s ease;
   z-index: 1000;
-  background-color: rgba(30, 30, 30, 0.5);
+  background-color: rgba(30, 30, 30, 0.2);
 }
 
 #navbar.transparent {
