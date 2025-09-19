@@ -32,8 +32,7 @@ a:hover {
   align-items: center;
   transition: background 0.3s ease;
   z-index: 1000;
-  background-color: #1e1e1e;
-  opacity: 0.5;
+  background-color: rgba(30, 30, 30, 0.5);
 }
 
 #navbar.transparent {
@@ -77,6 +76,15 @@ a:hover {
 
 #navbar .dropdown-menu li {
   padding: 5px 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;          /* desktop gap */
+  margin: 0;
+  padding-right: 40px; /* add some space on the right */
+  white-space: nowrap;  /* keep links on one line */
 }
 
 /* Reduce gap on mobile so links stay on one line */
