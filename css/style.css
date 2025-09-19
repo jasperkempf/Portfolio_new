@@ -24,7 +24,7 @@ a:hover {
 /* Logo */
 #navbar .logo {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   color: #f0f0f0;
   white-space: nowrap; /* keep logo on one line */
 }
@@ -32,11 +32,10 @@ a:hover {
 /* Navbar links */
 #navbar ul {
   display: flex;
-  gap: 10px;           /* smaller gap on mobile */
+  gap: 5px;           /* smaller gap on mobile */
   margin: 0;
   padding-right: 20px; /* distance from right edge */
   white-space: nowrap;  /* keep links on one line */
-  overflow-x: auto;    /* allow horizontal scroll if needed */
 }
 
 /* Navbar */
@@ -44,7 +43,7 @@ a:hover {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 15px 40px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
