@@ -83,7 +83,7 @@ a:hover {
   display: flex;
   gap: 20px;          /* desktop gap */
   margin: 0;
-  padding-right: 40px; /* add some space on the right */
+  padding-right: 80px; /* add some space on the right */
   white-space: nowrap;  /* keep links on one line */
 }
 
@@ -91,7 +91,7 @@ a:hover {
 @media (max-width: 480px) {
   #navbar ul {
     gap: 10px;  /* smaller gap */
-    padding-right: 40px; /* optional: reduce padding on the right */
+    padding-right: 80px; /* optional: reduce padding on the right */
   }
 }
 
