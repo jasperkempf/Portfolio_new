@@ -82,7 +82,7 @@ a:hover {
 @media (max-width: 480px) {
   #navbar ul {
     gap: 10px;  /* smaller gap */
-    padding-right: 10px; /* optional: reduce padding on the right */
+    padding-right: 40px; /* optional: reduce padding on the right */
   }
 }
 
