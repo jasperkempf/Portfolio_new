@@ -25,42 +25,50 @@ a:hover {
 #navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background 0.3s ease;
+  padding: 15px 40px;
+  background-color: #1e1e1e;
   z-index: 1000;
 }
 
-#navbar.transparent {
-  background: transparent;
+/* Logo */
+#navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-#navbar.solid {
-  background: #1e1e1e;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.6);
-}
-
+/* Nav links */
 #navbar ul {
   list-style: none;
   display: flex;
   gap: 20px;
-  padding-right: 80px; 
+  margin: 0;
+  padding: 0;
 }
 
-#navbar ul li {
-  position: relative;
+/* Links */
+#navbar ul li a {
+  color: #8FEAC7;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
+#navbar ul li a:hover {
+  opacity: 0.8;
+}
+
+/* Dropdown */
 #navbar .dropdown-menu {
   display: none;
   position: absolute;
+  background-color: #1e1e1e;
+  padding: 10px 0;
   top: 100%;
   left: 0;
-  background: #1e1e1e;
-  padding: 10px 0;
 }
 
 #navbar .dropdown:hover .dropdown-menu {
@@ -71,14 +79,13 @@ a:hover {
   padding: 5px 20px;
 }
 
-/* Hamburger Menu */
+/* Hamburger */
 .hamburger {
-  display: none;              /* hidden on desktop */
+  display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
   z-index: 2000;
-  position: relative;
 }
 
 .hamburger span {
@@ -90,7 +97,6 @@ a:hover {
   transition: all 0.3s ease;
 }
 
-/* Hamburger animation when active */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -103,43 +109,32 @@ a:hover {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive Navbar */
+/* Mobile Styles */
 @media (max-width: 768px) {
-
-  /* Hamburger visible on mobile */
-  .hamburger {
-    display: flex;
-  }
-
-  /* Mobile menu */
   #navbar ul {
     position: fixed;
-    top: 60px;           /* below navbar */
-    right: -100%;         /* hidden by default */
+    top: 60px;
+    right: -100%;
     width: 200px;
     flex-direction: column;
     background-color: #1e1e1e;
     padding: 20px;
     gap: 15px;
     transition: right 0.3s ease;
-    z-index: 999;
+    z-index: 1500;
   }
 
-  /* Show menu when active */
   #navbar ul.show {
     right: 0;
   }
 
-  /* Prevent links from wrapping */
-  #navbar ul li a {
-    white-space: nowrap;
+  .hamburger {
+    display: flex;
   }
 
-  /* Dropdown menu for mobile */
   #navbar .dropdown-menu {
     position: relative;
     top: 0;
-    background: #2a2a2a;
     display: none;
     flex-direction: column;
     padding: 10px 0;
@@ -149,7 +144,6 @@ a:hover {
     display: flex;
   }
 }
-
 /* Hero Section */
 .hero {
   height: 100vh;
