@@ -25,50 +25,49 @@ a:hover {
 #navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background-color: #1e1e1e;
+  transition: background 0.3s ease;
   z-index: 1000;
+  background-color: #1e1e1e;
 }
 
-/* Logo */
-#navbar .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
+#navbar.transparent {
+  background: transparent;
 }
 
-/* Nav links */
 #navbar ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 20px;  /* default gap for desktop */
   margin: 0;
   padding: 0;
 }
 
-/* Links */
 #navbar ul li a {
   color: #8FEAC7;
   text-decoration: none;
-  white-space: nowrap;
+  white-space: nowrap; /* prevent breaking into multiple lines */
 }
 
 #navbar ul li a:hover {
   opacity: 0.8;
 }
 
-/* Dropdown */
+#navbar ul li {
+  position: relative;
+}
+
 #navbar .dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #1e1e1e;
-  padding: 10px 0;
   top: 100%;
   left: 0;
+  background: #1e1e1e;
+  padding: 10px 0;
 }
 
 #navbar .dropdown:hover .dropdown-menu {
@@ -79,71 +78,14 @@ a:hover {
   padding: 5px 20px;
 }
 
-/* Hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  z-index: 2000;
-}
-
-.hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #8FEAC7;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
+/* Reduce gap on mobile so links stay on one line */
+@media (max-width: 480px) {
   #navbar ul {
-    position: fixed;
-    top: 60px;
-    right: -100%;
-    width: 200px;
-    flex-direction: column;
-    background-color: #1e1e1e;
-    padding: 20px;
-    gap: 15px;
-    transition: right 0.3s ease;
-    z-index: 1500;
-  }
-
-  #navbar ul.show {
-    right: 0;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  #navbar .dropdown-menu {
-    position: relative;
-    top: 0;
-    display: none;
-    flex-direction: column;
-    padding: 10px 0;
-  }
-
-  #navbar .dropdown.active .dropdown-menu {
-    display: flex;
+    gap: 10px;  /* smaller gap */
+    padding-right: 10px; /* optional: reduce padding on the right */
   }
 }
+
 /* Hero Section */
 .hero {
   height: 100vh;
