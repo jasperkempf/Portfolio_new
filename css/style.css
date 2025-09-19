@@ -24,7 +24,7 @@ a:hover {
 /* Logo */
 #navbar .logo {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: #8FEAC7;
   white-space: nowrap; /* keep logo on one line */
 }
