@@ -3,10 +3,9 @@ const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('show');
-  hamburger.classList.toggle('active'); // animate X
+  hamburger.classList.toggle('active');
 });
 
-// Dropdown toggle on mobile
 const dropdowns = document.querySelectorAll('#navbar .dropdown');
 
 dropdowns.forEach(dropdown => {
