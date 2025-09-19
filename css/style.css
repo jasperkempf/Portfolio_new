@@ -139,6 +139,65 @@ a:hover {
   color: #fff;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #8FEAC7;
+  border-radius: 2px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  #navbar ul {
+    position: fixed;
+    top: 60px; /* below navbar */
+    right: -100%; /* hide off-screen */
+    width: 200px;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    padding: 20px;
+    gap: 15px;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  #navbar ul.show {
+    right: 0; /* slide in */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  #navbar ul li a {
+    white-space: nowrap; /* prevent wrapping */
+  }
+
+  /* Dropdown menu for mobile */
+  #navbar .dropdown-menu {
+    position: relative;
+    top: 0;
+    background: #2a2a2a;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  #navbar .dropdown.active .dropdown-menu {
+    display: flex;
+  }
+}
+
+
 /* Footer */
 footer {
   background: #1e1e1e;
